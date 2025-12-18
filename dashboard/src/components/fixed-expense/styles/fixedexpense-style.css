@@ -1,6 +1,26 @@
 .table-actions{
+    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .table-fixed-expenses-container{
+        overflow: auto;
+    }
+
+    .table-fixed-expenses-container header{
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .table-fixed-expenses-container table thead tr th,
+    .table-fixed-expenses-container table tbody tr td{
+        width: 100px;
+        padding: 14px;
+    }
+
 }

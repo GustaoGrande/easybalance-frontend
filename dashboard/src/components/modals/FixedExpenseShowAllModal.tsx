@@ -41,46 +41,48 @@ export default function FixedExpenseShowAllModal({activated, setActivated}: moda
         onClose={() => setActivated(false)}
         sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}
         >
-            <Sheet variant="outlined" sx={{padding: '10px', borderRadius: '6px', boxShadow: '0px 0px 11px grey', flex: 0.8, p: '30px', overflow: 'auto', maxHeight: '24rem'}}>
+            <Sheet variant="outlined" sx={{padding: '10px', borderRadius: '6px', boxShadow: '0px 0px 11px grey', flex: 0.9, p: '10px', overflow: 'auto', maxHeight: '24rem'}}>
                 <ModalClose/>
                 {fixedExpenses ?
                 <>{fixedExpenses.results.map(obj => {
                     return(
-                    <Sheet key={`${obj.year}-${obj.month}`} variant="outlined" sx={{marginTop: '10px', marginBottom: '40px', p: '4px'}}>
-                        <header style={{display: 'flex', justifyContent: 'space-between'}}>
-                            <div>
-                                <Typography level='body-sm'>{keyObjectRetriever(obj.month, monthNamesPT)} - {obj.year}</Typography>
-                            </div>
-                        </header>
+                    <Sheet key={`${obj.year}-${obj.month}`} variant="outlined" sx={{marginTop: '30px', marginBottom: '40px', p: '4px'}}>
+                        <div className="table-fixed-expenses-container">
+                            <header style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <div>
+                                    <Typography level='body-sm'>{keyObjectRetriever(obj.month, monthNamesPT)} - {obj.year}</Typography>
+                                </div>
+                            </header>
 
-                        <Table variant='plain' size='sm' hoverRow>
+                            <Table variant='plain' size='sm' hoverRow>
 
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Categoria</th>
-                                    <th>Valor</th>
-                                    <th>Vencimento</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                {obj.monthly_expenses.map(monthly_expenses => {
-
-                                    return(
+                                <thead>
                                     <tr>
-                                        <td>{monthly_expenses.fixed_expense.name}</td>
-                                        <td>{monthly_expenses.fixed_expense.category.name}</td>
-                                        <td>{currencyFormatter.format(parseFloat(monthly_expenses.fixed_expense.value))}</td>
-                                        <td>{monthly_expenses.due_date ? monthly_expenses.due_date : '-'}</td>
-                                        <td>{keyObjectRetriever(monthly_expenses.status, paymentStatusPT)}</td>
+                                        <th>Nome</th>
+                                        <th>Categoria</th>
+                                        <th>Valor</th>
+                                        <th>Vencimento</th>
+                                        <th>Status</th>
                                     </tr>
-                                    )
-                                })}
-                            </tbody>
+                                </thead>
 
-                        </Table>
+                                <tbody>
+                                    {obj.monthly_expenses.map(monthly_expenses => {
+
+                                        return(
+                                        <tr>
+                                            <td>{monthly_expenses.fixed_expense.name}</td>
+                                            <td>{monthly_expenses.fixed_expense.category.name}</td>
+                                            <td>{currencyFormatter.format(parseFloat(monthly_expenses.fixed_expense.value))}</td>
+                                            <td>{monthly_expenses.due_date ? monthly_expenses.due_date : '-'}</td>
+                                            <td>{keyObjectRetriever(monthly_expenses.status, paymentStatusPT)}</td>
+                                        </tr>
+                                        )
+                                    })}
+                                </tbody>
+                            
+                            </Table>
+                        </div>
                     </Sheet>
                     )
                 })}</>

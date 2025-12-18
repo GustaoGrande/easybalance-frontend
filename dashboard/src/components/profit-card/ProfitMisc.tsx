@@ -21,9 +21,10 @@ const ExpenseMisc = ({diffPercent}: {diffPercent: number}) => {
 
     return(
         <div className="profit-growth">
-            <p className="growth-text">{text1}</p>
-            <span className={`growth-value ${diffPercent < 0 ? 'positive' : 'negative'}`}>{percentFormatter.format(diffPercent)}</span>
-            <p className="growth-text">nos gastos em relação ao mês passado</p>
+            <p className="growth-text">
+                {text1}
+                <span className={`growth-value ${diffPercent < 0 ? 'positive' : 'negative'}`}>{percentFormatter.format(diffPercent)} </span>
+                nos gastos em relação ao mês passado</p>
         </div>
     )
 }
@@ -34,9 +35,11 @@ const IncomeMisc = ({diffPercent}: {diffPercent: number}) => {
 
     return(
         <div className="profit-growth">
-            <p className="growth-text">{text1}</p>
-            <span className={`growth-value ${diffPercent > 0 ? 'positive' : 'negative'}`}>{percentFormatter.format(diffPercent)}</span>
-            <p className="growth-text">nos lucros em relação ao mês passado</p>
+            <p className="growth-text">
+                {text1}
+                <span className={`growth-value ${diffPercent > 0 ? 'positive' : 'negative'}`}>{percentFormatter.format(diffPercent)} </span>
+                nos lucros em relação ao mês passado
+            </p>
         </div>
     )
 }

@@ -30,7 +30,7 @@ export default function FixedExpense(){
         <>
             {activateModal && (<FixedExpenseShowAllModal activated={activateModal} setActivated={setActivateModal}/>)}
 
-            <Card>
+            <Card className="table-fixed-expenses-container">
                 <header style={{display: 'flex', justifyContent: 'space-between'}}>
                     <div>
                         <Typography level='title-sm'>Despesas Fixas</Typography>

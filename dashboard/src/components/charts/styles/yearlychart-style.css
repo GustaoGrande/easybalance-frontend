@@ -5,13 +5,14 @@
     padding: 4px;
 }
 
+.year-balance-chart-header{
+    display: flex;
+    justify-content: space-between;
+}
+
 #year-menu{
     display: flex;
     gap: 10px;
-    position: absolute;
-    top: 8px;
-    right: 30px;
-    z-index: 1;
 }
 
 #year-menu .year-option{
@@ -20,6 +21,7 @@
     border: none;
     color: black;
     cursor: pointer;
+    font-size: 0.9rem;
 }
 
 #year-menu .active{

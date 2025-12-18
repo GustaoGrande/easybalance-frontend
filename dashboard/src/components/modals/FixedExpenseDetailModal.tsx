@@ -34,7 +34,7 @@ export default function FixedExpenseDetailModal({activated, setActivated, monthl
 
     if (!monthlyFixedExpense) return null
 
-    const [year, month, day] = monthlyFixedExpense.date.split('-')
+    const [year, month, _day] = monthlyFixedExpense.date.split('-')
 
     return(
         <Modal

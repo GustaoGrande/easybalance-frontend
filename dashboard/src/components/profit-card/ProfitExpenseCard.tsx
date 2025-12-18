@@ -54,7 +54,7 @@ export const Expense = () => {
                     <div className="profit-icon expense">
                         <TrendingDown fill="rgba(238, 44, 30, 1)" width={24} height={24}/>
                     </div>
-                    <Button sx={{padding: '0px', fontSize: 10}} color="danger" size="sm" variant="plain" onClick={() => setActiveModal(true)}>
+                    <Button sx={{padding: '0px', fontSize: '0.7rem'}} color="danger" size="sm" variant="plain" onClick={() => setActiveModal(true)}>
                         <p>Registrar saída</p>
                     </Button>
                 </div>

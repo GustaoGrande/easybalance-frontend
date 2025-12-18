@@ -14,14 +14,14 @@
 }
 
 .profit-card .profit-title{
-    font-size: 10px;
+    font-size: 1rem;
     font-style:oblique;
     font-weight: 6500;
     color: var(--profit-text-secondary-color);
 }
 
 .profit-card .profit-value{
-    font-size: 24px;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
@@ -30,7 +30,6 @@
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    gap: 10px;
     top: 10px;
     right: 20px;
 }
@@ -64,14 +63,11 @@
 }
 
 .growth-value{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
+    font-size: 0.8rem;
 }
 
 .growth-text{
-    font-size: 10px;
+    font-size: 0.8rem;
     font-style: italic;
     color: var(--profit-text-secondary-color);
 }
@@ -84,3 +80,6 @@
     color: var(--negative-color)
 }
 
+@media screen and (max-width: 768px){
+
+}

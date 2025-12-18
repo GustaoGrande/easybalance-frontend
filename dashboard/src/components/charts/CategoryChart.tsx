@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Card from "../card/Card";
 import Chart from "react-apexcharts"
 import { BACKEND_URL, TRANSACTION_URI} from "../../config";

@@ -1,8 +1,8 @@
 export const YearsMenu = ({activeYear, years, setState}: {activeYear: number, years: number[], setState: React.Dispatch<React.SetStateAction<number>>}) => {
 
     return(
-        <div>
-            <div style={{marginLeft: 10, fontWeight: 500, fontSize: 14}}>
+        <div className="year-balance-chart-header">
+            <div style={{marginLeft: 10, fontWeight: 500, fontSize: '0.9rem'}}>
                 Movimentações no Ano
             </div>
 
