@@ -1,0 +1,33 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fcfcfc;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content{
+  padding: 8px;
+  margin-left: 13rem;
+  margin-top: 4rem;
+  transition: margin-left 0.3s;
+}
+
+[data-page-tag="dashboard"]{
+  background-color: #1d5e5a;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1000px){
+  .content{
+    margin-left: 0px;
+  }
+}

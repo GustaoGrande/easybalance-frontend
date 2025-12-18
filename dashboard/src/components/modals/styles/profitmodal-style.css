@@ -1,0 +1,50 @@
+.sheet-modal__container{
+    position: relative;
+    width: 32rem;
+}
+
+.input__container{
+    display: grid;
+    grid-template-columns: 100px 300px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.input__container.center{
+    grid-template-columns: 400px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input__container label{
+    font-size: 0.8rem;
+}
+
+#profit-value{
+    background: none;
+    outline: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.815);
+    font-size: 24px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .sheet-modal__container{
+        width: 22rem;
+    }
+
+
+    .input__container{
+        grid-template-columns: 1fr;
+        gap: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #listbox-modal-profit{
+        width: 20rem !important;
+    }
+}

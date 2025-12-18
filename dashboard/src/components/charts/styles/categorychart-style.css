@@ -1,0 +1,44 @@
+.category-chart{
+    padding: 4px;
+}
+
+.category-chart header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.category-chart header h2{
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.category-chart .category-option{
+    background: none;
+    outline: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+
+}
+
+.category-chart .category-option.active{
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.272);
+    border-radius: 4px;
+}
+
+.category-legend__container{
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 4px;
+}
+
+.category-legend__value{
+    font-weight: 600;
+}

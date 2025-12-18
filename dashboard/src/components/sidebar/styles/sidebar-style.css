@@ -1,0 +1,128 @@
+:root{
+    --sidebar-color-bg: #121621;
+    --sidebar-color-text: rgb(241, 232, 216);
+}
+
+.sidebar__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 13rem;
+    height: 100dvh;
+    background-color: var(--sidebar-color-bg);
+    transition: left 0.5s;
+    z-index: 1;
+}
+
+.sidebar__container header{
+    font-size: 0.5rem;
+    color: var(--sidebar-color-text);
+    padding: calc(3 * 8px);
+    border-bottom: 1px solid rgb(241, 232, 216);
+}
+
+.sidebar__itens{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 8px;
+    list-style: none;
+}
+
+.sidebar__itens li a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 4px;
+    border: none;
+    border-left: 1px solid rgba(30, 77, 116, 0);
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--sidebar-color-text);
+}
+
+.sidebar__itens .itens-ico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar__itens li a:hover{
+    border: none;
+    border-left: 1px solid rgb(30, 77, 116);
+}
+
+
+.toppanel__container{
+    display: flex;
+    margin-left: 13rem;
+}
+
+.toppanel__container .mobile__btn{
+    display: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.toppanel__container .mobile__btn:hover{
+    background-color: rgba(128, 128, 128, 0.17);
+    border-radius: 6px;
+}
+
+.toppanel-itens-left__container{
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mobile-sidebar-bg__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.386);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation: mobile-bg-show 1s;
+}
+
+@keyframes mobile-bg-show{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .sidebar__container{
+        left: -210px;
+        z-index: 2;
+    }
+
+    .sidebar__container.expanded{
+        left: 0px;
+    }
+
+    .toppanel__container{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        padding: 10px;
+        margin-left: 0px;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.549);
+        backdrop-filter: blur(4px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+    }
+
+    .toppanel__container .mobile__btn{
+        display: block;
+    }
+}

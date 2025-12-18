@@ -1,0 +1,86 @@
+:root{
+    --profit-text-primary-color: rgb(0, 0, 0);
+    --profit-text-secondary-color: rgb(70, 70, 70);
+    --positive-color: rgb(104, 180, 104);
+    --negative-color: rgb(180, 104, 104);
+}
+
+.profit-card{
+    position: relative;
+}
+
+.profit-card:hover{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.345);
+}
+
+.profit-card .profit-title{
+    font-size: 10px;
+    font-style:oblique;
+    font-weight: 6500;
+    color: var(--profit-text-secondary-color);
+}
+
+.profit-card .profit-value{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.action-buttons__container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    gap: 10px;
+    top: 10px;
+    right: 20px;
+}
+
+.profit-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+}
+
+.profit-icon.income{
+    background-color: rgb(98, 159, 98);
+}
+
+.profit-icon.expense{
+    background-color: rgba(157, 32, 32, 0.604);
+}
+
+.profit-icon.budget{
+    background-color: rgb(98, 130, 159);
+}
+
+.profit-growth{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.growth-value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.growth-text{
+    font-size: 10px;
+    font-style: italic;
+    color: var(--profit-text-secondary-color);
+}
+
+.positive{
+    color: var(--positive-color);
+}
+
+.negative{
+    color: var(--negative-color)
+}
+
